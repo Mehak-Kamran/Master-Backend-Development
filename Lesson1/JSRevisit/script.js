@@ -33,3 +33,23 @@ console.log(finded)
 
 //indexof
 console.log(arr.indexOf(2))
+
+///////////////////END//////////////////////////////////////////////////////
+
+//OBJECTS
+
+var car={
+    name:"civic",
+    model:"5",
+    color:"pink",
+    manual:false,
+    automatic:true
+}
+console.log(car)
+console.log(car.manual,car.automatic)
+console.log(car["model"])
+car.color="blue"
+console.log(car["color"])
+Object.freeze(car)//if you want that the object should be immutable
+car.name="toyota"
+console.log(car.name)

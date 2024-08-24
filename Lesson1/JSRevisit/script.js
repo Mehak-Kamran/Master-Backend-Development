@@ -53,3 +53,20 @@ console.log(car["color"])
 Object.freeze(car)//if you want that the object should be immutable
 car.name="toyota"
 console.log(car.name)
+
+///////////////////END//////////////////////////////////////////////////////
+
+//length
+let numbers=[56,34,89,77]
+let grooming=function(a,b,c){
+   console.log("hello")
+}
+console.log("length of array is ",numbers.length,"length of function",grooming.length)
+
+//asyncawait
+ async function homework(){
+    var blob =await fetch("url")
+    var ans=blob.json()
+    console.log(ans)
+}
+homework()

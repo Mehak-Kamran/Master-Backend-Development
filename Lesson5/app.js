@@ -1,23 +1,28 @@
 const express=require("express");
 const app=express();
-//requiring cookie parser to read cookie
-const cookieparser=require("cookie-parser")
-app.use(cookieparser())
+const bcrypt=require("bcrypt");
+
 
 app.get("/",function(req,res){
-    //set a cookie
-    res.cookie("name","mehak")
-    //
-    res.send("hello");
-    //read cookie
-    console.log(req.cookies)
+
+    bcrypt.genSalt(10, function(err, salt) {
+        //encry
+        // bcrypt.hash("mehak", salt, function(err, hash) {
+        //     // Store hash in your password DB.
+        //     console.log(hash)
+            
+        // });
+        //decry
+        bcrypt.compare("mehak", "$2b$10$6YG731FpJyPZEK7o6Nl0w.vrkoKy1piR5m3VGk/MphN64DyPt8cCC", function(err, result) {
+            // result == true
+            console.log(result)
+        });
+    });
+   res.send("hi")
 
 })
 
-app.get("/read",(req,res)=>{
-    res.send("read");
 
-})
 
 
 app.listen(3000)

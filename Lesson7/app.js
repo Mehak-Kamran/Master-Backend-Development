@@ -4,7 +4,7 @@ const user=require("./model/usermodel")
 const post=require("./model/postmodel")
 
 app.get("/",(req,res)=>{
-    res.send("hello")
+    res.send("welcome to index page")
 
 })
 
